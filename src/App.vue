@@ -26,33 +26,35 @@
       </div>
 
       <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+      <v-btn>
+        <router-link v-bind:to="{ name: 'Home' }">
+          <v-icon>mdi-home</v-icon>
+          Home
+        </router-link>
+      </v-btn>
+      <v-btn>
+        <router-link v-bind:to="{ name: 'About' }">
+          <v-icon>mdi-home</v-icon>
+          About
+        </router-link>
+      </v-btn>
+      <v-btn>
+        <router-link v-bind:to="{ name: 'Work' }">
+          <v-icon>mdi-home</v-icon>
+          Work
+        </router-link>
       </v-btn>
     </v-app-bar>
 
     <v-content>
-      <HelloWorld/>
+      <router-view></router-view>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-
 export default {
   name: 'App',
-
-  components: {
-    HelloWorld,
-  },
-
   data: () => ({
     //
   }),
