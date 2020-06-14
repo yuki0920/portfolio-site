@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <v-app-bar app>
+      <v-app-bar-nav-icon v-on:click.stop='drawer = !drawer'></v-app-bar-nav-icon>
       <v-toolbar-title class="headline">
         Yuki's Site
       </v-toolbar-title>
@@ -19,7 +20,7 @@
         Work
       </router-link>
     </v-app-bar>
-
+    <SideNav />
     <v-content>
       <router-view></router-view>
     </v-content>
@@ -27,10 +28,14 @@
 </template>
 
 <script>
+import SideNav from "./components/SideNav"
 export default {
   name: 'App',
+  components: {
+    SideNav,
+  },
   data: () => ({
-    //
+    drawer: false,
   }),
 };
 </script>
