@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-app-bar app>
-      <v-app-bar-nav-icon v-on:click.stop='drawer = !drawer'></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon v-on:click.stop='openSideMenu'></v-app-bar-nav-icon>
       <v-toolbar-title class="headline">
         Yuki's Site
       </v-toolbar-title>
@@ -34,8 +34,10 @@ export default {
   components: {
     SideNav,
   },
-  data: () => ({
-    drawer: false,
-  }),
+  methods: {
+    openSideMenu () {
+      this.$store.dispatch('toggleSideMenu')
+    }
+  }
 };
 </script>
