@@ -13,11 +13,11 @@
           Home
         </v-btn>
         <v-btn text v-bind:to="{ name: 'About' }">
-          <v-icon>mdi-home</v-icon>
-          About
+          <v-icon>mdi-lead-pencil</v-icon>
+          Skill
         </v-btn>
         <v-btn text v-bind:to="{ name: 'Work' }">
-          <v-icon>mdi-home</v-icon>
+          <v-icon>mdi-camera-burst</v-icon>
           Work
         </v-btn>
       </v-toolbar-items>

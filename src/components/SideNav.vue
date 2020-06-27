@@ -31,8 +31,8 @@ export default {
       drawer: false,
       items: [
         { title: "Home", icon: "mdi-home", link: { name: 'Home' } },
-        { title: "About", icon: 'mdi-home', link: { name: 'About'  } },
-        { title: "Work", icon: "mdi-home", link: { name: 'Work' } },
+        { title: "Skill", icon: 'mdi-lead-pencil', link: { name: 'About'  } },
+        { title: "Work", icon: "mdi-camera-burst", link: { name: 'Work' } },
       ],
     }
   }
