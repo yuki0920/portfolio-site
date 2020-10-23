@@ -8,17 +8,9 @@
 
       <v-spacer></v-spacer>
       <v-toolbar-items>
-        <v-btn text v-bind:to="{ name: 'Home' }">
-          <v-icon>mdi-home</v-icon>
-          Home
-        </v-btn>
-        <v-btn text v-bind:to="{ name: 'About' }">
-          <v-icon>mdi-lead-pencil</v-icon>
-          Skill
-        </v-btn>
-        <v-btn text v-bind:to="{ name: 'Work' }">
-          <v-icon>mdi-camera-burst</v-icon>
-          Work
+        <v-btn text v-for="(content, index) in pageContents" :key="index" :to="content.link">
+          <v-icon>{{content.icon}}</v-icon>
+          {{content.link.name}}
         </v-btn>
       </v-toolbar-items>
     </v-app-bar>
@@ -36,6 +28,15 @@ export default {
   name: 'App',
   components: {
     SideNav,
+  },
+  data() {
+    return {
+      pageContents: [
+        {link: { name: 'Home' }, icon: 'mdi-home'},
+        {link: { name: 'About' }, icon: 'mdi-lead-pencil'},
+        {link: { name: 'Work' }, icon: 'mdi-camera-burst'},
+      ],
+    }
   },
   methods: {
     ...mapActions(['toggleSideMenu'])
