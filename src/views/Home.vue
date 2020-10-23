@@ -9,7 +9,6 @@
 import Introduction from '@/components/Introduction.vue'
 
 export default {
-  name: 'Home',
   components: {
     Introduction
   }

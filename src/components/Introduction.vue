@@ -16,7 +16,6 @@
 
 <script>
   export default {
-    name: 'Introduction',
     props: {
       msg: String
     }
