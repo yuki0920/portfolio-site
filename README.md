@@ -1,42 +1,28 @@
-# original_vue
+# My Portfolio Site
 
-## Project setup
+## Setup
 ```
+#Project setup
 yarn install
-```
 
-### Compiles and hot-reloads for development
-```
+# Compiles and hot-reloads for development
 yarn serve
-```
 
-### Compiles and minifies for production
-```
+# Compiles and minifies for production
 yarn build
-```
 
-### Lints and fixes files
-```
+# Lints and fixes files
 yarn lint
 ```
 
-## Deploy
-
-### Init
-
+## Build & Deploy
 ```
-firebase init
-```
-
-### Build
-```
+# Build
 yarn build
-```
 
-### Deploy
-```
+# Auto deploy**
+git push
+
+# (Manual deploy)
 firebase deploy
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

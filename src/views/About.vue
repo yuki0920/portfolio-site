@@ -13,6 +13,7 @@
             <v-card-text>{{ language.text }}</v-card-text>
           </v-card>
         </v-row>
+        <p class="mt-3">※ myProgrammingHistroy == {{programmingHistory}}</p>
       </v-col>
       <v-col cols="12">
         <h2 class="headline font-weight-bold mb-3">Accounting</h2>
@@ -42,7 +43,22 @@ export default {
         {name: '税務申告', year: '2年程度', text: '同エネルギー会社にて出納管理を担当。'}
       ]
     }
-  }
+  },
+  computed: {
+    programmingHistory() {
+    let dateNow = new Date();
+    let startDate = new Date(2018, 11, 22);
 
+    let elapsedMilliseconds = dateNow.getTime() - startDate.getTime();
+    let elapsedDays = elapsedMilliseconds / (1000 * 60 * 60 * 24);
+
+    let year = Math.floor(elapsedDays / 365);
+    const DAYS_PER_MONTH = 365 / 12
+    let months = Math.floor((elapsedDays - 365 * year) / DAYS_PER_MONTH);
+    let days = Math.floor((elapsedDays - (year * 365) - (months * DAYS_PER_MONTH)));
+
+    return `${year}years and ${months}months and ${days}days`
+    }
+  }
 }
 </script>
