@@ -23,7 +23,7 @@
 
 <script>
 import SideNav from "./components/SideNav"
-import { mapActions } from 'vuex'
+import { mapMutations } from 'vuex'
 export default {
   name: 'App',
   components: {
@@ -39,7 +39,8 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['toggleSideMenu'])
+    // NOTE: `this.toggleSideMenu()` を `this.$store.commit('toggleSideMenu')` にマッピングする
+    ...mapMutations(['toggleSideMenu'])
   }
 };
 </script>
