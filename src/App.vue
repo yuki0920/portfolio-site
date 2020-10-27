@@ -27,7 +27,7 @@
         </v-btn>
       </v-toolbar-items>
     </v-app-bar>
-    <SideNav />
+    <SideNav :link-items='pageContents' />
     <v-content>
       <router-view></router-view>
     </v-content>

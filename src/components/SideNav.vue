@@ -47,6 +47,12 @@ export default {
         { title: "Work", icon: "mdi-camera-burst", link: { name: 'Work' } },
       ],
     }
+  },
+  props: {
+    linkItems: {
+      type: Object,
+      required: true
+    }
   }
 }
 </script>
