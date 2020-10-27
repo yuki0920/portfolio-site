@@ -1,6 +1,10 @@
 <template>
   <v-container>
-    <v-navigation-drawer v-model="$store.state.drawer" absolute temporary>
+    <v-navigation-drawer
+      v-model="$store.state.drawer"
+      absolute
+      temporary
+    >
       <v-list>
         <v-list-item>
           <v-list-item-avatar>
@@ -11,12 +15,20 @@
 
         <v-divider></v-divider>
 
-        <v-list-item v-for="(item, index) in items" v-bind:key="index" v-bind:to="item.link">
+        <v-list-item
+          v-for="(item, index) in items"
+          :key="index"
+          :to="item.link"
+        >
           <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
+            <v-icon>
+              {{ item.icon }}
+            </v-icon>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
+            <v-list-item-title>
+              {{ item.title }}
+            </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
