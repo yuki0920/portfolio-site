@@ -1,11 +1,13 @@
 <template>
   <v-container>
     <v-row class="text-left top">
-      <v-col cols="12" md="12">
+      <v-col
+        cols="12"
+        md="12"
+      >
         <h1 class="display-2 font-weight-bold my-3">
           {{ msg }}
         </h1>
-
         <p class="subheading font-weight-regular">
           Check my portfolio...
         </p>

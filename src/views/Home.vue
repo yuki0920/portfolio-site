@@ -5,8 +5,8 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import Introduction from '@/components/Introduction.vue'
+
+import Introduction from '../components/Introduction.vue'
 
 export default {
   components: {

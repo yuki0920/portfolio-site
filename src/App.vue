@@ -1,20 +1,33 @@
 <template>
   <v-app>
     <v-app-bar light app>
-      <v-app-bar-nav-icon v-on:click.stop='toggleSideMenu'></v-app-bar-nav-icon>
-      <v-toolbar-title class="headline" style="cursor: pointer" @click="$router.push('/')" >
+      <v-app-bar-nav-icon
+        @click.stop='toggleSideMenu'>
+      </v-app-bar-nav-icon>
+      <v-toolbar-title
+        class="headline"
+        style="cursor:pointer"
+        @click="$router.push('/')"
+      >
         Yuki's Site
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
       <v-toolbar-items>
-        <v-btn text v-for="(content, index) in pageContents" :key="index" :to="content.link">
-          <v-icon>{{content.icon}}</v-icon>
+        <v-btn
+          text
+          v-for="(content, index) in pageContents"
+          :key="index"
+          :to="content.link"
+        >
+          <v-icon>
+            {{content.icon}}
+          </v-icon>
           {{content.link.name}}
         </v-btn>
       </v-toolbar-items>
     </v-app-bar>
-    <SideNav />
+    <SideNav :link-items='pageContents' />
     <v-content>
       <router-view></router-view>
     </v-content>
