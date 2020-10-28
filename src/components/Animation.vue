@@ -15,12 +15,12 @@
 </template>
 
 <script>
-const POINTS_COUNT = 50
+const POINTS_COUNT = 100
 const MAX_Y = 100
 const WIDTH = 600
 const HEIGHT = 400
 const EASE = 0.4
-const SPEED = 0.002
+const SPEED = 0.001
 const WAVE_SCALE = (1 / Math.PI) * 0.5
 const valuesToPathStr = (values) => {
   if (!values.length) { return 'M0,0' }
