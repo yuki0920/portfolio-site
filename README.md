@@ -20,7 +20,7 @@ yarn lint
 # Build
 yarn build
 
-# Auto deploy**
+# Auto deploy
 git push
 
 # (Manual deploy)
