@@ -48,6 +48,7 @@ export default {
         {link: { name: 'Home' }, icon: 'mdi-home'},
         {link: { name: 'About' }, icon: 'mdi-lead-pencil'},
         {link: { name: 'Work' }, icon: 'mdi-camera-burst'},
+        {link: { name: 'Contact' }, icon: 'mdi-email-open'},
       ],
     }
   },
