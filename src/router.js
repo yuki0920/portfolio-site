@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from './views/Home.vue'
 import About from './views/About.vue'
 import Work from './views/Work.vue'
+import Contact from './views/Contact.vue'
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,11 @@ Vue.use(VueRouter)
     path: '/work',
     name: 'Work',
     component: Work
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: Contact
   }
 ]
 
