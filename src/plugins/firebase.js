@@ -3,10 +3,13 @@ import firebase from "firebase";
 const config = {
   apiKey: "AIzaSyAJHm7fKBRWInB0axN6rzQrzT9AFvi262M",
   authDomain: "portfolio-yuki0920.firebaseapp.com",
-  databaseURL: "portfolio-yuki0920.firebaseio.com",
+  databaseURL: "https://portfolio-yuki0920.firebaseio.com",
   projectId: "portfolio-yuki0920",
   storageBucket: "portfolio-yuki0920.appspot.com",
-  messagingSenderId: "128360875758"
+  messagingSenderId: "128360875758",
+  appId: "1:128360875758:web:7ee19262a87918b91bd5ff",
+  measurementId: "G-LZFP9FJH72"
+
 };
 firebase.initializeApp(config);
 export const functions = firebase.functions();
